@@ -1,3 +1,2 @@
 this is new file
 this word is boring
-this is new line
