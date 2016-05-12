@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>新京报网_即时新闻 时政 评论 深度报道</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-language" content="zh-CN" />
+<meta name="author" content="www.bjnews.com.cn" />
+<meta name="copyright" content="www.bjnews.com.cn" />
+<meta name="description" content="新京报网以文字、图片、视频等全媒体形式，为用户提供全天候热点新闻，涵盖突发新闻、时事、财经、娱乐、体育，以及评论、杂志和博客等，新京报网本着品质源于责任的的信念,致力于成为用户喜爱的精品新闻网站。" />
+<meta name="keywords" content="新京报网,新京报,电子报,报纸,传媒,时政,娱乐,财经,经济,民生,国内,国际,视频,杂志,访谈,评论,投票,专题,周刊,手机报,博客" />
+<meta property="og:url" content="http://www.bjnews.com.cn/" />
+<meta property="og:description" content="新京报网以文字、图片、视频等全媒体形式，为用户提供全天候热点新闻，涵盖突发新闻、时事、财经、娱乐、体育，以及评论、杂志和博客等，新京报网本着品质源于责任的的信念,致力于成为用户喜爱的新闻网站。" />
+<meta property="og:site_name" content="新京报网" />
+<link rel="Shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link href="Css/layout.css" rel="stylesheet" type="text/css" />
+<link href="Css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.js"></script>
+<script src="Scripts/formvalidator-4.1.1.js" type="text/javascript" charset="UTF-8"></script>
+<script src="Scripts/formvalidatorregex.js" type="text/javascript" charset="UTF-8"></script>
+<script type="text/javascript" src="Scripts/all.js"></script>
+</head>
+
+<body>
+<div id="Header">
+  <dl class="newtop">
+    <dd>
+      <ul>
+        <li class="news now"><a href="http://www.bjnews.com.cn/">新京报网</a></li>
+        <li><a href="http://epaper.bjnews.com.cn/">电子报</a></li>
+        <li><a href="http://www.bj100.com/">京探网</a></li>
+        <li><a href="http://famous.bjnews.com.cn/">名汇FAMOUS</a></li>
+        <li><a href="http://realestate.bjnews.com.cn/">房地产世界</a></li>
+      </ul>
+    </dd>
+    <dt>
+      <ul>
+        <li><a href="http://app.bjnews.com.cn/app/">新京报APP</a></li>
+        <li><a href="http://passport.bjnews.com.cn/feed/" class="rss">RSS</a></li>
+        <li><a href="javascript:void(0)" onclick="AddFavorite(window.location,document.title);" target="_self">收藏本站</a></li>
+        <li><a href="javascript:void(0)" onclick="SetHome(this,window.location)" target="_self">设为首页</a></li>
+      </ul>
+    </dt>
+  </dl>
+  <p class="dltr"><a href="index.html" target="_self"><img src="Picture/ilogo.jpg"/></a></p>
+  <div class="dlnews">
+    <div class="ulwr">
+      <ul id="fordate">
+      </ul>
+    </div>
+    <ul class="ullf">
+      <li class="fst" id="day"></li>
+      <li id="five">前五天新闻</li>
+    </ul>
+    <div class="ulri">
+      <form action="search.php" method="get" id="form1" target="_self">
+        <div class="sel" id="xial"> <span va='1'>标题</span>
+          <ul id="slist">
+            <li va='1' class="ahr">标题</li>
+            <li va='2'>作者</li>
+            <li va='3'>正文</li>
+          </ul>
+        </div>
+        <dl class="sinpt">
+          <dd>&nbsp;</dd>
+          <dt><input type="hidden" name="type" id="serType" value="1" /><input type="text" name="keyword" class="skey" value="" maxlength="20" /></dt>
+        </dl>
+        <div class="seach"> <img src="Picture/sa1.jpg" width="65" height="20" onclick="checkForm()" onmouseover="this.src='http://img2.bjnews.com.cn/www/sa2.jpg'"  onmouseout="this.src='http://img2.bjnews.com.cn/www/sa1.jpg'"/> </div>
+      </form>
+    </div>
+  </div>
+  <dl class="kuaix">
+    <dd>
+      <p class="an">即时新闻</p>
+      <div class="wz">
+        <ul id="scrollcont">
+          <script type="text/javascript" src="Scripts/realtime_last.js"></script>
+        </ul>
+      </div>
+      <span class="leftcur"></span> <span class="rightcur"></span> </dd>
+    <dt>
+    
+      <div class="l1"><div id='dlxx' class="shjh"></div>&nbsp;<span id="dengl">登录</span><a id="zhuc" href="/reg">注册</a>
+      <ul id="ger">
+          <li><a href="/profile">个人中心</a></li>
+          <li><a href="/profile/passwd">修改密码</a></li>
+          <li id="tuichu">注销账户</li>
+          
+        </ul>
+      
+      <div class="denglk" id="denglk">
+      	<div class="denglt">
+        	<form action="" id="formdl" name="formdl">
+        	<p class="youx">
+            	账号&nbsp;&nbsp;<input type="text" class="you2" id="username" value="昵称/邮箱" onblur="if(this.value==''){this.value='昵称/邮箱';this.className='you2'}" onfocus="if(this.value=='昵称/邮箱'){this.value='';this.className='you'}"/>&nbsp;&nbsp;&nbsp;<a href="/reset/">忘记密码</a>
+            </p>
+        	<p class="youx">
+            	密码&nbsp;&nbsp;<input type="password" class="mi" id="pwd"/>&nbsp;<input type="checkbox" name="remb" id="remb" checked=""/>&nbsp;&nbsp;<input type="button" class="sud" value="登录" id="denglu" onmouseover="this.className='sud2'" />
+            </p>
+        	<span class="sj"></span>
+            </form>
+            <div id="clos"></div>
+        </div>
+      </div>
+      <script>$(".l1").mouseenter(function(){$("#dlxx").addClass("shj").removeClass("shjh")});$(".l1").mouseleave(function(){$("#dlxx").addClass("shjh").removeClass("shj")});$("#dlxx").mouseenter(function(){$(this).addClass("shjh").removeClass("shj");$("#ger").show()});$("#dlxx").mouseleave(function(){$(this).addClass("shj").removeClass("shjh");$("#ger").hide()});$("#ger").mouseenter(function(){$(this).show()});$("#ger").mouseleave(function(){$(this).hide()});$("#ger li").each(function(i){$(this).css({"backgroundPosition":"0px "+ -(i*25)+"px"});$(this).hover(function(){$(this).css({"backgroundPosition":"-90px "+ -(i*25)+"px","backgroundColor":"#A80000","color":"#fff"})},function(){$(this).css({"backgroundPosition":"0px "+ -(i*25)+"px","backgroundColor":"#C8C8C8","color":"#fff"})})});function gCookie(name){var arr=document.cookie.match(new RegExp("(^|)"+name+"=([^;]*)(;|$)"));if(arr!=null)return unescape(arr[2])}function dCookie(name){var expValue=new Date();expValue.setTime(expValue.getTime()-1);var cval=gCookie(name);if(cval!=null)document.cookie=name+"="+cval+";expires="+expValue.toUTCString()}function dlin(val){$("#dengl").hide();$("#zhuc").hide();if(($.browser.msie&&$.browser.version=='6.0')){var v=val.length*12+'px';$("#dlxx").parent().css({width:val.length})};$("#dlxx").html("<a href='/profile'>"+val+"</a>").show()}function tuion(){$("#dlxx").parent().css({width:"auto"});$("#dlxx").html("").hide();$("#pwd").val("");$("#dengl").show();$("#zhuc").show()}function chkfomv(){var usname=$("#username").val();var pwd=$("#pwd").val();var keep=$("#remb").attr("checked");if(keep){keep="y"}else{keep="n"}$.getJSON("/login/ajaxlogin?username="+usname+"&passwd="+pwd+"&keeplogin="+keep+"",function(data){if(data[0]=="1"){dlin(data[1])}else{alert("登录失败，请重新输入！")}})}$("#clos").click(function(){$("#denglk").hide()});$("#dengl").live("click",function(){$("#denglk").slideDown()});$("#denglu").click(function(){$("#denglk").slideUp();chkfomv()});$("#tuichu").live("click",function(){$("#ger").hide();$.get("/index/ajaxlogout",function(data){if(data=="1"){tuion();dCookie("PASSPORT");window.location.href='http://www.bjnews.com.cn'}})});var t=Math.random();$.getJSON("/login/ajaxchklogin?t="+t,function(data){if(data[0]=="1"){dlin(data[1])}});
+</script>
+      </div>
+      
+      <div class="l2" id="web"><a href="http://weibo.com/xjb/">官方微博</a></div>
+      <div class="l3" id="svol"> <span>在线服务</span>
+        <ul>
+          <li>800080180</li>
+          <li><a href="http://www2.bjnews.com.cn/baoliao/">在线报料</a></li>
+          <li><a href="http://www2.bjnews.com.cn/tougao/">在线投稿</a></li>
+          <li><a href="http://www2.bjnews.com.cn/script/takepaper/">在线订报</a></li>
+          <li><a href="http://www2.bjnews.com.cn/script/zt/aipai/">拍客荐图</a></li>
+        </ul>
+      </div>
+      <div class="l4" id="rxdh"><span>热线电话</span>
+        <ul>
+          <li><img src="Picture/rx.jpg" width="78" height="125" /></li>
+        </ul>
+      </div>
+    </dt>
+  </dl>
+  
+  
+</div>
+
+<div id="main">
+<div class="reg">
+<p class="grzxcg">创建您的帐号</p>
+<form action="/reg/submit" method="post" name="form2" id="form2">
+  <dl class="dlreg">
+  	<dd class="lf">邮&nbsp;&nbsp;箱：</dd>
+    <dd class="lc"><input type="text" class="g-ipt" id="email" name="email" style="width:300px" value="" maxlength="32"/></dd>
+    <dt class="ri"><div id="emailTip" style="width:280px"></div></dt>
+  	<dd class="lall"><div id="emailFixTip" class="fixtip"></div></dd>
+  </dl>
+  <dl class="dlreg">
+  	<dd class="lf">昵&nbsp;&nbsp;称：</dd>
+    <dd class="lc"><input type="text" class="g-ipt" id="nickname" name="nickname" style="width:300px" value="" maxlength="18"/></dd>
+    <dt class="ri"><div id="nicknameTip" style="width:280px"></div></dt>
+    <dd class="lall"><div id="nicknameFixTip" class="fixtip"></div></dd>
+  </dl>
+  
+  <dl class="dlreg">
+  	<dd class="lf">密&nbsp;&nbsp;码：</dd>
+    <dd class="lc"><input type="password" class="g-ipt" id="password1" name="passwd" style="width:300px" maxlength="16"/></dd>
+    <dt class="ri"><div id="password1Tip" style="width:280px"></div></dt>
+    <dd class="lall"><div id="password1FixTip" class="fixtip"></div></dd>
+  </dl>
+  
+  <dl class="dlreg">
+  	<dd class="lf">确认密码：</dd>
+    <dd class="lc"><input type="password" class="g-ipt" id="password2" name="password2" style="width:300px"  maxlength="16"/></dd>
+    <dt class="ri"><div id="password2Tip" style="width:280px"></div></dt>
+    <dd class="lall"><div id="password2FixTip" class="fixtip">请再次输入密码</div></dd>
+  </dl>
+  
+  <dl class="dlreg">
+  	<dd class="lf">验 证 码：</dd>
+    <dd class="lc"><input type="text" class="g-ipt" id="captchacode" name="captchacode" style="width:120px" maxlength="4"/> <img id="vcodeimages" src="Picture/76a834cd8ea54ecb857b1263fed50532.gif" onclick="$('#captchacode').val('');$('#captchacodeTip').html('');this.src='/index/captcha?t='+Math.random()+'&PHPSESSID=3f8v5826sc2p8v8s7a74tfsgt3'" style="cursor:pointer; vertical-align:middle;" alt="点击刷新验证码" title="点击刷新验证码" /> <a href="#" onclick="$('#captchacode').val('');$('#captchacodeTip').html('');$('#vcodeimages').attr('src','/index/captcha?t='+Math.random()+'&PHPSESSID=3f8v5826sc2p8v8s7a74tfsgt3');return false;">换一个</a></dd>
+    <dt class="ri"><div id="captchacodeTip" style="width:280px"></div></dt>
+    <dd class="lall"><div id="captchacodeFixTip" class="fixtip"></div></dd>
+  </dl>
+  
+  <dl class="dlreg">
+    <dd class="lall"><input type="submit" class="tij" name="button" id="button" value="提 交" onmousemove="this.className='tij now'" onmouseout="this.className='tij'" /></dd>
+  </dl>
+</form>
+<script type="text/javascript">
+$(document).ready(function(){var emlmsg=new Array();emlmsg['E01']='请重新输入！';emlmsg['E02']='请输有效邮箱，密码遗失凭此领取！';emlmsg['E03']='很抱歉，您输入的邮箱已被注册！';emlmsg['E04']='请输入昵称，不超过18字符！';emlmsg['E05']='昵称只允许使用字母、数字、汉字';emlmsg['E06']='很抱歉，您输入的昵称已存在！';emlmsg['E07']='验证码错误！';emlmsg['E08']='对不起，您输入的昵称中包含敏感词！';emlmsg['s01']='经检查可以注册';emlmsg['s02']='正在进行合法性校验，请稍候...';emlmsg['s03']='请输有效邮箱，用于功能激活、密码找回！';emlmsg['s04']='2~9个汉字或4~18个字符';emlmsg['s05']='该昵称可以使用';emlmsg['s06']='6~16个字符，可包括字母、数字、特殊符号，区分大小写';$.formValidator.initConfig({submitOnce:true,formID:"form2",onError:function(msg){alert(msg)},submitAfterAjaxPrompt:'有数据正在异步验证，请稍等...'});$("#email").formValidator({onShowFixText:""+emlmsg['s03']+"",onShow:" ",onFocus:"",onCorrect:""+emlmsg['s01']+"",defaultValue:""}).inputValidator({min:6,max:32,onError:""+emlmsg['E01']+""}).regexValidator({regExp:"^[a-zA-Z0-9][a-zA-Z0-9_\.]*@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}(\.[a-zA-Z]{2,4})?$",onError:""+emlmsg['E02']+""}).ajaxValidator({dataType:"html",async:true,url:"/reg/ajaxchkemail",success:function(data){var data=$.parseJSON(""+data+"");if(data[0]==1)return true;if(data[0]==0)return emlmsg[""+data[1]+""];return false},buttons:$("#button"),error:function(jqXHR,textStatus,errorThrown){alert("服务器没有返回数据，可能服务器忙，请重试"+errorThrown)},onWait:""+emlmsg['s02']+""});$("#nickname").formValidator({onShowFixText:""+emlmsg['s04']+"",onShow:" ",onCorrect:""+emlmsg['s05']+"",onEmpty:"昵称不能为空！"}).ajaxValidator({type:"get",dataType:"html",async:true,url:"/reg/ajaxchknickname",success:function(data){var data=$.parseJSON(""+data+"");if(data[0]==1)return true;if(data[0]==0)return emlmsg[""+data[1]+""];return false},buttons:$("#button"),error:function(jqXHR,textStatus,errorThrown){alert("服务器没有返回数据，可能服务器忙，请重试"+errorThrown)},onWait:""+emlmsg['s02']+""});$("#password1").formValidator({onShowFixText:""+emlmsg['s06']+"",onShow:"请输入密码",onFocus:"至少1个长度",onCorrect:"密码合法"}).inputValidator({min:6,max:16,empty:{leftEmpty:false,rightEmpty:false,emptyError:"密码两边不能有空符号"},onError:"密码长度错误,请确认"}).passwordValidator({compareID:"nickname"});$("#password2").formValidator({onShowFixText:"请再次输入密码",onShow:"输再次输入密码",onFocus:"至少1个长度",onCorrect:"密码一致"}).inputValidator({min:1,empty:{leftEmpty:false,rightEmpty:false,emptyError:"重复密码两边不能有空符号"},onError:"重复密码不能为空,请确认"}).compareValidator({desID:"password1",operateor:"=",onError:"两次密码不一致,请确认"});$("#captchacode").formValidator({onShowFixText:"输入验证码",onShow:"请输入验证码",onFocus:"验证码长度必须是4位数字",onCorrect:"输入正确"}).inputValidator({min:4,max:4,empty:{leftEmpty:false,rightEmpty:false,emptyError:"验证码不能为空"},onError:"验证码长度必须是4位数字,请确认"}).regexValidator({regExp:"num",dataType:"enum",onError:"输入不正确"}).ajaxValidator({dataType:"html",async:true,url:"/reg/ajaxchkcaptcha",success:function(data){var data=$.parseJSON(""+data+"");if(data[0]==1)return true;if(data[0]==0)return emlmsg[""+data[1]+""];return false},buttons:$("#button"),error:function(jqXHR,textStatus,errorThrown){alert("服务器没有返回数据，可能服务器忙，请重试"+errorThrown)},onWait:""+emlmsg['s02']+""})});
+</script>
+</div>
+<!--  --></div>
+
+<script src="Scripts/foot_epaper.js"></script>
+<script>
+	function tabqh(prm1,prm2,prm3){var jQueryltb=prm1;var jQuerycen=prm2;var num=25;jQueryltb.find("li").each(function(i){jQuery(this).hover(function(){var cgnum=-(i*25);jQuery(this).addClass("now").siblings().removeClass("now");jQueryltb.css({backgroundPosition:"0px "+cgnum+"px"});jQuerycen.find(""+prm3+":eq("+i+")").stop(true,true).fadeIn("slow").show().siblings().hide()})})}jQuery(function(){jQuery("#header dt li").hover(function(){jQuery(this).addClass("now").siblings().removeClass("now")});tabqh(jQuery("#ltb"),jQuery("#ltct"),"img");tabqh(jQuery("#ultop"),jQuery("#ullist"),"ul")});
+</script>
+<div style="display:none;">
+<script charset="utf-8" language="JavaScript" src="Scripts/cnzzcn.js"></script>
+</div>
+</body>
+</html>

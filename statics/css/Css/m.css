@@ -1,0 +1,835 @@
+﻿/*
+m.css
+移动端适配
+@author 宫文博
+last update 2014 07 09 
+弹性布局
+屏幕查询
+icon font
+手机端 头部 左侧查询 和右侧 菜单 用的不是图标 而是字体
+*/
+/*全屏代码开始*/
+html:-moz-full-screen {  
+    img{
+        width: attr(data-width);
+    }
+}
+html:-webkit-full-screen {  
+    img{
+        width: attr(data-width);
+    }
+} 
+html:fullscreen {  
+    img{
+        width: attr(data-width);
+    }
+}
+img:-webkit-full-screen{
+    width: attr(data-width);
+} 
+/*全屏代码结束*/
+/*icon字体开始*/
+/*icon字体结束*/
+    /*css 重置 开始*/
+    body{
+        text-align: center;
+    }
+    /* ipage 2014 12 30 */
+    #ipage {
+        text-align: center;
+        margin: 15px auto 0px;
+        padding-bottom: 50px;
+    }
+    #ipage span {
+        background: #a80000;
+        color: #fff;
+    }
+    #ipage span {
+        display: inline-block;
+        padding: 9px 12px;
+        margin: 0px auto 0px;
+        margin-right: 4px;
+        border: 1px solid #a80000;
+        font: bold 12px Tahoma, Geneva, sans-serif,'微软雅黑';
+        color: #fff;
+    }
+    #ipage a{
+        display: inline-block;
+        padding: 9px 12px;
+        margin: 0px auto 0px;
+        margin-right: 4px;
+        border: 1px solid #a80000;
+        font: bold 12px Tahoma, Geneva, sans-serif,'微软雅黑';
+        color: #a80000;
+        text-decoration: none;
+    }
+    /* ipage end */
+    #sld{
+        text-align: left;
+    }
+    #mobile-menu,#mobile-search{
+        display: none;
+    }
+    p{
+        text-indent: 0.1em;
+    }
+    .mob{
+        display: none;
+    }
+    
+    input[type="search"]{
+        width: 95%;
+        height: 25px;
+        border-radius:15px;
+        /*
+        -webkit-box-flex: 8;
+        -moz-box-flex: 8;
+        width: 80%;
+        -webkit-flex: 8;
+        -ms-flex: 8; 
+        flex: 8;  
+        */
+    }
+    #mobile-search input button{
+        display: block;
+        height: 40px;
+        -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+        -moz-box-flex: 1;         /* OLD - Firefox 19- */
+        width: 10%;               /* For old syntax, otherwise collapses. */
+        -webkit-flex: 1;          /* Chrome */
+        -ms-flex: 1;              /* IE 10 */
+        flex: 1;  
+    }
+    #logo{
+        width: 90%;
+        max-width: 1003px;
+        margin: 0 auto;
+              /* OLD - iOS 6-, Safari 3.1-6 display: -webkit-box;*/
+                 /* OLD - Firefox 19- (buggy but mostly works)
+                  display: -moz-box;
+                  update 2014 08 18 火狐18.0 bug
+                  */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        /*justify-content: center;*/
+        flex-flow:row;/*从左到右排列*/
+    }
+    #logo .logo{
+        -webkit-box-flex: 6;      /* OLD - iOS 6-, Safari 3.1-6 */
+        -moz-box-flex: 6;         /* OLD - Firefox 19- */
+        width: 60%;               /* For old syntax, otherwise collapses. */
+        -webkit-flex: 6;          /* Chrome */
+        -ms-flex: 6;              /* IE 10 */
+        flex: 6;   
+    }
+    #logo .search{
+        width: 240px;
+        min-width: 240px;
+        max-width: 240px;               /* For old syntax, otherwise collapses. */     
+    }
+    #main{
+        width: 90%;
+        max-width: 1003px;
+        margin: 0 auto;
+        text-align: left;
+        display: block;
+        display: -webkit-box;     /* OLD - iOS 6-, Safari 3.1-6 */
+                 /* OLD - Firefox 19- (buggy but mostly works)
+                  display: -moz-box;   在火狐18下会耽误事儿，以后别用这个属性了。
+                  2014 08 18
+                  */
+
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        /*justify-content: center;*/
+        flex-flow:row;/*从左到右排列*/
+        /*align-items: center;*/
+    }
+    .nav{
+        width: 90%;
+        max-width: 1003px;
+    }
+    #kuaixu{
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1003px;
+             /* OLD - iOS 6-, Safari 3.1-6 /* display: -webkit-box;  */*/
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        /*justify-content: center;*/
+        flex-flow:row;/*从左到右排列*/
+    }
+    #kuaixu dd{
+        flex:3;
+        -moz-box-flex: 3;
+        -ms-box-flex: 3;
+        -webkit-box-flex: 3;
+        order:1;
+    }
+    #kuaixu dt{
+        flex:1;
+        -moz-box-flex: 1;
+        -ms-box-flex: 1;
+        -webkit-box-flex: 1;
+        order:2;
+        min-width: 280px;
+        max-width: 280px;
+        margin: 0px 0px 0px 40px;
+    }
+    #klist{
+        text-align: left;
+    }
+    .nleft{
+        flex:3;
+        -moz-box-flex: 3;
+        -ms-box-flex: 3;
+        -webkit-box-flex: 3;
+        order:1;
+        position: relative;
+        /*
+        如果父层级 display 为 display: -webkit-box   字元素 若不设置为 position: relative; 则无法显示
+        */
+    }
+    /*
+    字体对齐
+
+    */
+    .content{
+        font-size:12px;
+        width: 100%;
+        text-align: left;
+        /*text-indent: 22px;*/
+        text-align:justify;
+        
+        text-justify:distribute-all-lines;
+        text-justify:inter-ideograph;
+    }
+    
+    .nright{
+        flex:1;
+        -moz-box-flex: 1;
+        -ms-box-flex: 1;
+        -webkit-box-flex: 1;
+        order:1;
+        order:2;
+        min-width: 240px;
+        max-width: 240px;
+        /*
+        fire fox
+        */
+        margin: 0px 0px 0px 40px;
+        position: relative;
+    }
+    #rsig{
+        display: none;
+    }
+
+    #logo .logo h1 a{
+        line-height: 1000px;
+        overflow: hidden;
+    }
+    #mobile-icones{
+        display: none;    
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        color: #fff;
+        /*mobile icons  移动端的图标  回首页  分享等 默认为不可见  mobile 情况下可见*/
+    }
+    /* update 2014/07/22 左侧内容区域内图片先不显示 通过js去除内联css样式后再显示 */
+    .nleft .content img{
+        display: none;
+    }
+    /* update 2014/07/22 end */
+@media screen and (max-width: 1024px){
+    .related .r{
+        display: none;
+    }
+    #pinl{
+        display: none;
+    }
+    .content p{
+        width: 100%;
+        text-indent: 0.1em;
+    }
+    #editor_baidu{
+        text-align: right;
+    }
+}
+@media screen and (max-width: 800px){
+    /* 2014/07/22 */
+    .datz{
+        width: 100%;
+        height: auto;
+    }
+    .datz .lcr,.datz .rcr{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px){
+    #header{
+        border-bottom:none;
+    }
+    #dbnews{
+        width: 100%;
+        height: auto;
+    }
+    .dbnews{
+        width: 100%;
+        height: auto;
+        padding:0px;
+    }
+    #dbnews .dbnews{
+        width: 96%;
+        margin: 5px 0px 5px 0px;
+        height: auto;
+        padding: 0px;
+        background:none;
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .related .r{
+        /*
+        display: none;
+        */
+    }
+    #pinl{
+        display: none;
+    }
+    #mobilefooter{
+        
+    }
+    #mobilefooter #showPcFooter:before{
+        font-family: icomoon;
+        content: "\e658";
+        cursor: pointer;
+    }
+    #pcfooter{
+        display: none;
+        font-size: 15px;
+        line-height: 20px;
+        
+    }
+	/*2015-10-13 移动端去除电子报start*/
+	/*.nav ul.menu li:nth-child(2){display:none;}*/
+	/*2015-10-13移动端去除电子报end*/
+}
+@media screen and (max-width: 660px){
+
+    #rsig{
+        display: none;
+    }
+    input[type="search"]{
+        width: 80%;
+        padding: 0px 0px 0px 10px;
+    }
+    .mob{
+        display: block;
+    }
+    #header{
+        padding-top: 0px;
+        height: auto;
+    }
+    #logo{
+        display: none;
+    }
+    .nav{
+        width: 100%;
+        -webkit-box-ordinal-group: 2;   /* OLD - iOS 6-, Safari 3.1-6 */
+          -moz-box-ordinal-group: 2;      /* OLD - Firefox 19- */
+          -ms-flex-order: 2;              /* TWEENER - IE 10 */
+          -webkit-order: 2;               /* NEW - Chrome */
+          order: 2; 
+          position: relative;
+    }
+    #nav{
+        position: relative;
+        height: auto;
+        width: 100%;
+        display: block;
+    }
+    .nav .menu{
+        width: 100%;
+        height: auto;
+        display: none;
+        order:3;
+        position: relative;
+        
+    }  
+    #mobile-menu{
+        text-align: center;
+        display: flex;
+        height: 40px;
+        line-height: 40px;
+        display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        /*justify-content: center;*/
+        flex-flow:row;/*从左到右排列*/
+        position: relative;
+        width: 100%;
+    }
+    #mobile-search-button{
+        min-width: 45px;
+        max-width: 45px;
+        height: 40px;
+        line-height: 40px;
+        cursor: pointer;
+		background:url(../Images/m_chazhaotg.jpg) no-repeat;
+		background-size:40px 40px;
+        -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+        -moz-box-flex: 1;         /* OLD - Firefox 19- */
+        width: 10%;               /* For old syntax, otherwise collapses. */
+        -webkit-flex: 1;          /* Chrome */
+        -ms-flex: 1;              /* IE 10 */
+        flex: 1;   
+        text-align: center;               /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    }
+    #mobile-search-button:before{
+        color: #fff;
+        font-size: 23px !important;
+       /* font-family: 'icomoon';
+        content: "\e612";*/
+        font-style: normal;
+        speak: none;
+        font-weight: normal;
+        min-width: 45px;
+        max-width: 45px;
+        height: 40px;
+        cursor: pointer;
+        -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+        -moz-box-flex: 1;         /* OLD - Firefox 19- */
+        width: 10%;               /* For old syntax, otherwise collapses. */
+        -webkit-flex: 1;          /* Chrome */
+        -ms-flex: 1;              /* IE 10 */
+        flex: 1;   
+        text-align: right;               /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    }
+
+    #mobile-logo{
+        color: #fff;
+        font-size: 18px;
+        -webkit-box-flex: 8;      /* OLD - iOS 6-, Safari 3.1-6 */
+        -moz-box-flex: 8;         /* OLD - Firefox 19- */
+        width:auto;
+        width: 100%;
+        /* For old syntax, otherwise collapses. */
+        -webkit-flex: 8;          /* Chrome */
+        -ms-flex: 8;              /* IE 10 */
+        flex: 8; 
+        text-align: left;
+        text-align: center;
+    }
+
+    #mobile-show-menu-button{
+        -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+        -moz-box-flex: 1;         /* OLD - Firefox 19- */
+        width: 10%;               /* For old syntax, otherwise collapses. */
+        -webkit-flex: 1;          /* Chrome */
+        -ms-flex: 1;              /* IE 10 */
+        flex: 1;   
+        min-width: 45px;
+        max-width: 45px;
+        height: 40px;
+        line-height: 40px;
+		background:url(../Images/menu_tbtg.jpg) no-repeat;
+		background-size:40px 40px;
+        cursor: pointer;
+        
+    }
+    .mobile-show-menu-button:before{
+        color: #fff;
+        font-size: 30px !important;
+       /* content: "\e656";
+        font-family: 'icomoon';*/
+        font-style: normal;
+        speak: none;
+        font-weight: normal;
+        min-width: 45px;
+        max-width: 45px;
+        line-height: 40px;
+        
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        -ms-font-smoothing: antialiased;
+        -o-font-smoothing: antialiased;
+    }
+    .mobile-hide-menu-button:before{
+        color: #fff;
+        font-size: 30px !important;
+      /*  content: "\e656";
+        font-family: 'icomoon';*/
+        font-style: normal;
+        speak: none;
+        font-weight: normal;
+        min-width: 45px;
+        max-width: 45px;
+        
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        -ms-font-smoothing: antialiased;
+        -o-font-smoothing: antialiased;
+    }
+    #mobile-search{
+        width: 100%;
+        height: 35px;
+        float: left;
+        clear: left;
+    }
+    /*
+    .nav{
+        content:string("123");
+    }*/
+    #kuaixu{
+        display: none;
+    }
+/*隐藏分类开始 */
+    .ntit dt {
+        display: none;
+    }
+  	.ntit dd{
+        width:100%;
+    }
+    .ntit dt {
+        display: none;
+    }
+    .ntit span,.ntit em{
+        display: none;
+    }
+    .ntit span {
+        width:auto;
+        float:left;
+        clear:none;
+    }
+    .ntit .date,.ntit .source{
+        display: block;
+    }
+   /*隐藏分类结束 */
+    #pinl{
+        display: none;
+    }
+    .tag{
+        display: none;
+    }
+    .related .l{
+        border-top: solid #ccc 1px;
+        width: 100%;
+    }
+    .related .r{
+        display: none;
+    }
+    #rsig{
+        display: none;
+    }
+    #main{
+        display: block;
+        flex-flow: column wrap;
+        padding-top: 50px;
+        flex-flow:column;/*从上到下排列*/
+    }
+    .nleft{
+        width: 100%;
+        padding: 0px;
+    }
+    /* 2014/07/22 begin */  
+    .content .datz{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+    .content .datz #scrollconts {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: auto;
+        height: auto;
+        overflow: hidden;
+    }
+    .content .datz .d_cnt{
+        width: 100%;
+        height: auto;
+        position: relative;
+        float: left;
+        display: inline;
+        overflow: hidden;
+    }
+    .content .datz .d_cnt .img {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .datz .lcr, .datz .rcr,.datz .lcr, .datz .lcr{
+        display: none;
+    }
+    /* 2014/07/22 end  */
+    .nleft #fontsize{
+        display: none;
+    }
+    .nleft h1{
+        font-size: 18px;
+        font-family: "Microsoft Yahei";
+    }
+    .nright{
+        margin: 0px;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .nright img{
+        width: 100%;
+    }
+    /* 手机版 缩略图 */
+    .nright .tjlist .t{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: -webkit-box;/* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox; /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Chrome */
+        display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        /*justify-content: center;*/
+        flex-flow:row;/*从左到右排列*/
+    }
+    /* 手机版 缩略图 左侧的图片 */
+    .tjlist .t .img{
+        -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+        -moz-box-flex: 1; /* OLD - Firefox 19- */
+        width: 15%; /* For old syntax, otherwise collapses. */
+        -webkit-flex: 1; /* Chrome */
+        -ms-flex: 1; /* IE 10 */
+        flex: 1;
+        min-width: 100px;
+        max-width: 100px;
+        margin: 0px 10px 0px 0px;
+    }
+    /* 手机版 缩略图 右侧的文字区域 */
+    .tjlist .t .txt{
+        -webkit-box-flex: 8; /* OLD - iOS 6-, Safari 3.1-6 */
+        -moz-box-flex: 8; /* OLD - Firefox 19- */
+        width: 75%; /* For old syntax, otherwise collapses. */
+        -webkit-flex: 8; /* Chrome */
+        -ms-flex: 8; /* IE 10 */
+        flex: 8;
+        position:static;
+        clear: none;
+        background:none;
+        margin: -4px 0px 0px 0px;
+        padding: 0;
+        display:block;
+        height: auto;
+        overflow: hidden;
+        position: static;
+        line-height: 20px;
+        display: none;
+        position: fixed;
+        left: -900px;
+    }
+    .tjlist .t a{
+        color: #666;
+
+        width: 65%;
+        margin: -10px 0px 0px 0px;
+        line-height: 35px;
+        word-wrap: break-word;
+    }
+    /* 手机版 缩略图 右侧的文字 */
+    .tjlist .t .txt a{
+        color: #f00;
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+        color: #666;
+        margin:0px; 
+        display:inline;
+    }
+    .tjlist .t .txt a:after{
+        width: 100%;
+        /*content: " ...";*/
+    }
+    .nright .top{
+        background:#D4D4D4 url(../Images/r.png) 0px -654px no-repeat;
+        height: 44px;
+        overflow: hidden;
+        border-bottom:solid #B4B4B4 1px;
+    }
+    .tdnews ul{
+        width: 96%;
+    }
+    .tdnews li{
+        display: flex;
+    }
+    .tdnews li span{
+        -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+        -moz-box-flex: 1;         /* OLD - Firefox 19- */
+        width: 20px;               /* For old syntax, otherwise collapses. */
+        max-width: 20px;
+        min-width: 20px;
+        -webkit-flex: 1;          /* Chrome */
+        -ms-flex: 1;              /* IE 10 */
+        flex: 1; 
+    }
+    .tdnews li h3{
+        -webkit-box-flex: 8;      /* OLD - iOS 6-, Safari 3.1-6 */
+        -moz-box-flex: 8;         /* OLD - Firefox 19- */
+        width: 80%;               /* For old syntax, otherwise collapses. */
+        -webkit-flex: 8;          /* Chrome */
+        -ms-flex: 8;              /* IE 10 */
+        flex: 8; 
+    }
+    .tuij{
+        background:#D4D4D4 url(../Images/r.png) 0px -474px no-repeat;
+        height: 44px;
+        overflow: hidden;
+        border-bottom:solid #B4B4B4 1px;
+    }
+    
+    .nright .rad{
+        width:240px;margin:0 auto;
+        min-width: 240px;
+        /*display: none;*/
+    }
+    .iphone{
+        /*display: none;*/
+    }
+    #mobile-icones{
+        /*移动端的图标  回首页 分享 可见 */
+        /* display: -webkit-box;  */     /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        /*justify-content: center;*/
+        flex-flow:row;/*从左到右排列*/
+    }
+    /*
+    回到PC端
+    index.HTML 566
+    */
+    #changeToPcModeButton{
+        -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+        -moz-box-flex: 1;         /* OLD - Firefox 19- */
+        width: 15%;               /* For old syntax, otherwise collapses. */
+        -webkit-flex: 1;          /* Chrome */
+        -ms-flex: 1;              /* IE 10 */
+        flex: 1; 
+        min-width: 240px;
+        order:3;
+        width: 100%;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+		background:url(../Images/small_pctb.gif) no-repeat 41% 50%;
+		background-size:12px 12px;
+    }
+@media screen and (max-width: 320px) {
+	 #changeToPcModeButton{
+		background:url(../Images/small_pctb.gif) no-repeat 39% 50%;
+		background-size:12px 12px; 
+		 }
+	}
+    #changeToPcModeButton[data-icon]:before {
+       /* font-family: 'icomoon';*/
+        font-style: normal;
+        speak: none;
+        font-weight: normal;
+        font-size: 12px !important;
+      /*  content: attr(data-icon);*/
+        color: #666;
+        height: 30px;
+        line-height: 30px;
+    }
+    #dbnews{
+        display: none;
+    }
+    #mobilefooter{
+        color: #fff;
+        background:#5A5A5A;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .nleft .content p span {
+        /*图片下面的文字 在手机里左对齐*/
+        text-align: left;
+        text-align: left;
+        width: 100%;
+        display: block;
+    }
+	
+}
+
+@media screen and (max-width: 960px) {
+    /*小于840像素的PC，菜单就要开始自适应了*/
+  #nav{
+    height: auto;
+  }
+  .nav{
+    height: auto;
+  }
+  #menu{
+    height: auto;
+    width: 100%;
+  }
+  #menu li{
+    display: block;
+    min-width: 80px;
+  }
+  #kuaixu{
+    display: none;
+  }
+}
+@media screen and (max-width: 1003px) {
+    /*小于1003像素的PC，适当增加一个边距。*/
+    #logo,#main,.nav{
+        width: 96%;
+    }
+    #kuaixu{
+        margin: 0 auto;
+        width: 96%;
+    }
+    #pinl img{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2){
+    /*针对 ipad 3/4 等高清分辨率的屏幕进行*/
+    img{
+        background-size:50%;
+    }
+
+}
+/*
+update 2014-11-28
+在网速慢的时候，底层也不要显示出flash的插件信息
+*/
+#nyplayer h2,#nyplayer h3,#nyplayer p{
+    display: block;
+}
+#video_cloud{
+	width: 720px;
+	height: 440px;
+	margin:0 auto;
+    display: block;
+}
+@media screen and (max-width:1190px) {
+    #video_cloud{ width:720px;margin:0 auto;display: block;}
+}
+@media screen and (max-width:650px) {
+    #video_cloud{ width:100%;margin:0 auto;display: block;height:280px;}
+    #video_cloud object{ height:280px;}
+}
+@media screen and (max-width:350px){
+	#video_cloud{ width:100%;margin:0 auto;display: block;height:200px;}
+    #video_cloud object{ height:200px;}
+}

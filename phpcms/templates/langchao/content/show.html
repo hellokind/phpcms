@@ -1,0 +1,66 @@
+﻿{template "content","header_show"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}Css/css.css" />
+<div id="main">
+    <div class="nleft">
+        <h1>{$title}</h1>
+        <dl class="ntit">
+            <dd>
+                <span>分类：</span><em><a href="{$CATEGORYS[$catid][url]}" target="_blank">{$CATEGORYS[$catid][catname]}</a></em>
+                <span class="date" id="pubtime_baidu">{date('Y-m-d H:i:s',time($inputtime))}</span>
+                <span class="source" id="source_baidu">
+                来源：<a href="{$CATEGORYS[$catid][url]}" target="_blank">{pc:content action="lists" catid="$catid" order="id DESC"  moreinfo="1"  num="1" }
+                {loop $data $r} 
+                {php list($copyfrom) = explode('|0', $r['copyfrom'])}  
+                   {$copyfrom}
+                {/loop}
+                {/pc}</a></span>
+                <span class="author" id="author_baidu"></span>
+            </dd>
+            <dt><span class="aj"></span><span class="ay"></span></dt>
+        </dl>
+        <div class="desc">
+            <p class="ctdesc" id="daoy">{$r[description]}</p>
+        </div>
+        <div class="content">
+            <p style="text-align: center"><br /> {$content} </p>
+            <p style="text-align:right;"><span id="editor_baidu"> <!-- 编辑： {loop $data $r} {$author} {/loop} --> </span></p>
+        </div>
+        <dl class="tag clearfix">
+            <dd>
+                {php $keywords=explode(' ',$r[keywords]);}
+                {loop $keywords $keyword}
+                <a href="{APP_PATH}index.php?m=content&c=tag&a=lists&tag={urlencode($keyword)}">{$keyword}</a>
+              {/loop}
+            </dd>
+            <dt>
+                <div class="share" data-share="share_1230"><span class="sina"></span><span class="qqwb"></span><span class="weixin"></span><span class="baidu"></span><span class="douban"></span>
+                    <div class="qrcode"></div>
+                </div>
+                <p class="attitude"><span class="up" data-id="401906"></span></p>
+            </dt>
+        </dl>
+        <!-- related start -->
+        <!-- related end -->
+        <!-- comment start -->
+        <div id="pinl" idth="720" height="147">
+            <img src="{IMG_PATH}Picture/comment.jpg" width="720" height="137" border="0">
+        </div>
+        <!-- comment end -->
+    </div>
+    <div class="nright">
+        <div class="rad">
+            <!-- AdService_Position_2 begin -->
+			<div id="adpos_2" style="width:240px;height:160px;">
+            <div id="adpos_2" style="width:240px;height:160px;">
+                <img src="{IMG_PATH}Picture/bqgg.png" width="240" height="160" alt="" border="0">
+            </div>         
+            </div>
+			<!-- AdService_Position_2 end -->
+        </div>
+        {template "content","left_top"}
+        {template "content","left_tuwen"}
+    </div>
+</div>
+
+<script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
+{template "content","footer_min"}

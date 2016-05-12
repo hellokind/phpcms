@@ -1,0 +1,152 @@
+﻿{template "content","header"}
+<div id="main">
+    <div class="main">
+        <div id="rolemain" role="main">
+            <div class="left"> 
+<!--首页顶部推荐位-->    
+{pc:content action="position" posid="2" order="id DESC" num="4"}
+{loop $data $r}
+ {if $r[thumb]}
+<div class="news" id="">
+<h2><a href="{$r[url]}" target="_blank">{$r[title]}</a></h2>
+<div class="tit">
+    <span>分类：</span>
+    <em><a href="{$CATEGORYS[$r[catid]][url]}" target="_blank">{$CATEGORYS[$r[catid]][catname]}</a></em>
+    <span class="date">{date('Y-m-d H:i:s',$r[inputtime])}</span>
+</div>
+<div class="pnews">
+    <div class="lnew">
+    <a href="{$r[url]}" target="_blank">
+    <img src="{thumb($r[thumb],299,189)}" width="299" height="189" original="{thumb($r[thumb],299,189)}">
+    </a>
+    </div>
+    <div class="rnew">
+    <p class="disc">{$r[description]}</p>
+    </div>
+</div>
+<dl class="tag">
+    <dd> {pc:content action="lists" catid="$r[catid]" where posid="2" num="1" order="id DESC" page="$page"} {loop $data $r}
+      {php $keywords = explode(' ',$r[keywords]);}
+       {loop $keywords $keyword}
+      <a href="{APP_PATH}index.php?m=content&c=tag&a=lists&tag={urlencode($keyword)}">{$keyword}</a>
+      {/loop} {/loop} {/pc} </dd>
+    <dt> <div class="share" data-share="share_401906"><span class="sina"></span><span class="qqwb"></span><span class="baidu"></span><span class="douban"></span></div> </dt>
+</dl>
+</div> 
+{/if}
+{/loop}
+{/pc}
+<!--推荐位end-->
+<p>this is </p>
+<!--新闻satrt-->
+{pc:content action="lists" catid="6"  where="`catid` in (6,9,13,14,15,16,17,19,20,21)" num="15" order="listorder ASC, inputtime DESC" page="$page"}
+{loop $data $r}
+ {if $r[posids]==0} 
+ {if $r[thumb]}
+<div class="news" id="n_123">
+<h2><a href="{$r[url]}" target="_blank">{$r[title]}</a></h2>
+<div class="tit">
+    <span>分类：</span>
+    <em><a href="{$CATEGORYS[$r[catid]][url]}" target="_blank">{$CATEGORYS[$r[catid]][catname]}</a></em>
+    <span class="date">{date('Y-m-d H:i:s',$r[inputtime])}</span>
+</div>
+<div class="pnews">
+    <div class="lnew">
+    <a href="{$r[url]}" target="_blank">
+    <img src="{thumb($r[thumb],299,189)}" width="299" height="189" original="{thumb($r[thumb],299,189)}">
+    </a>
+    </div>
+    <div class="rnew">
+    <p class="disc">{$r[description]}</p>
+    </div>
+</div>
+<dl class="tag">
+    <dd>
+    {php $keywords = explode(' ',$r[keywords]);}
+    {loop $keywords $keyword}
+      <a href="{APP_PATH}index.php?m=content&c=tag&a=lists&tag={urlencode($keyword)}">{$keyword}</a>
+    {/loop}
+    </dd>
+    <dt>
+    <div class="share" data-share="share_401906"><span class="sina"></span><span class="qqwb"></span><span class="baidu"></span><span class="douban"></span></div>
+    </dt>
+</dl>
+</div> 
+{/if}
+{/if} 
+{/loop}
+{/pc}
+<!--新闻end-->
+               <!--  <div id="more"><span data-loding='load'>点击加载更多</span></div> -->
+            </div>
+<div class="right">
+    <div style="width:240px;height:73px;margin-bottom:10px"><a href="http://www.12377.cn/node_548446.htm" target="_blank"><img src="{IMG_PATH}Picture/wljb_appxl.jpg" width="240" height="73"/></a>
+    </div>
+ 
+
+<!--评论 start-->
+  <div class="p"><img src="{IMG_PATH}Picture/09b153af06e0.jpg" width="240" height="73" /></div>
+{pc:content action="position" posid="19" order="id DESC" num="1"}
+ {loop $data $r}
+  <div class="guancj">
+    <h2><a href="{$r[url]}" target="_blank">{$r[title]}</a></h2>
+    <p class="txt">{str_cut($r[description],350,'...')}<a href="{$r[url]}" target="_blank">全文>></a> </p>
+  </div>
+  {php $title=$r[title]}
+ {/loop}
+  <div class="gbtn">
+    <ul class="rul">
+    {pc:content action="position" posid="19" order="id DESC" num="3"}
+    {loop $data $r}
+      {if $r[title]!==$title}
+      <li><a href="{$r[url]}" target="_blank">{$r[title]}</a></li>
+      {/if}
+    {/loop}
+    {/pc}
+    </ul>
+  </div>
+{/pc}
+<!--评论 end-->
+
+<!--google广告 start-->
+  <div class="rad">
+    <a href="#" target="_blank"><img src="{IMG_PATH}Picture/13f708f327fb.jpg"/></a>
+    <div id="adpos_10" style="width:240px;height:160px;">
+            <img src="{IMG_PATH}Picture/bqgg.png" width="240" height="160" alt="" border="0">      
+        </div>
+  </div>
+<!-- google广告 end-->
+
+<!--书评 start-->
+  <p class="rtit sp"></p>
+{pc:content action="position" posid="20" order="id DESC" num="1"}
+ {loop $data $r}
+  <div class="shuping">
+    <h3><a href="{$r[url]}" target="_blank">{$r[title]}</a></h3>
+    <dl class="book">
+      <dd><img src="{thumb($r[thumb],60,76)}" width="60" height="76" /></dd>
+      <dt>{$r[description]}<a href="{$r[url]}" target="_blank">全文>></a></dt>
+    </dl>
+    {php $title=$r[title]}
+    <div class="bklist">
+      <ul class="rul">
+       {pc:content action="position" posid="20" order="id DESC" num="3"}
+       {loop $data $r}
+        {if $r[title]!==$title}
+        <li><a href="{$r[url]}" target="_blank">{$r[title]}</a></li>
+       {/if}
+      {/loop}
+       {/pc}
+      </ul>
+    </div>
+  </div>
+  {/loop}
+  {/pc}
+<!--书评 end-->
+{template "content","left_top"}
+            </div>
+            <!--<div class="rbl"></div>--> 
+        </div>
+    </div>
+</div>
+{template "content","footer"}

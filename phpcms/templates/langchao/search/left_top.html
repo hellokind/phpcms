@@ -1,0 +1,49 @@
+<!--Top start-->
+<div class="rtit top">
+<div class="topday" id="topday">
+    <ul>
+        <li class="now">一天</li>
+        <li>一周</li>
+        <li>一月</li>
+    </ul>
+</div>
+</div>
+<div id="tdnews">
+<!--新闻排行榜 start-->
+<div class="tdnews">
+<ul>
+{pc:content action="hits" catid="6"  where="`catid` in (6,9,13,14,15,16,17,19,20,21)" order="dayviews DESC" num="10"}
+{php $i=1}
+{loop $data $r}
+<li><span {if $i>3} class="b"{/if}>{$i}</span><h3><a href="{$r[url]}">{$r[title]}</a></h3></li>
+{php $i++}
+{/loop}
+{/pc}
+</ul>
+</div>
+<div class="tdnews" style="display:none;">
+<ul>
+{pc:content action="hits" catid="6"  where="`catid` in (6,9,13,14,15,16,17,19,20,21)" order="weekviews DESC" num="10"}
+{php $i=1}
+{loop $data $r}
+<li><span {if $i>3} class="b"{/if}>{$i}</span><h3><a href="{$r[url]}">{$r[title]}</a></h3></li>
+{php $i++}
+{/loop}
+{/pc}
+</ul>
+</div>
+<div class="tdnews" style="display:none;">
+<ul>
+{pc:content action="hits" catid="6"  where="`catid` in (6,9,13,14,15,16,17,19,20,21)" order="monthviews DESC" num="10"}
+{php $i=1}
+{loop $data $r}
+<li><span {if $i>3} class="b"{/if}>{$i}</span><h3><a href="{$r[url]}">{$r[title]}</a></h3></li>
+{php $i++}
+{/loop}
+{/pc}
+</ul>
+</div>
+</div>
+<!--新闻排行榜 end-->
+<!--Top end-->
+

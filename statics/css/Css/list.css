@@ -1,0 +1,105 @@
+﻿/*
+list flox box
+@author gongwb
+http://www.bjnews.com.cn
+
+base on m.css
+*/
+/*logo*/
+.logo dd{
+    overflow: hidden;
+}
+.logo dd .lstlog{
+    line-height: 200px;
+}
+.logo dt{
+    width:auto;
+}
+/* update 2014/07/22 列表页 标题 dt dd 适配 bug 修复开始 */
+.lleft .news dl dd{
+    
+    width: auto;
+}
+.lleft .news dl dt{
+    min-width: 120px;
+    text-align: right;
+    width: 20%;
+}
+/*列表页 火狐18 兼容 2014 08 18*/
+.lleft{
+    width: 732px;
+    height: auto;
+    overflow: hidden;
+}
+.nright {
+    margin: 0px 0px 0px 20px;
+}
+/* update 2014/07/22 列表页 标题 dt dd 适配 bug 修复结束 */
+#footer{
+    width: 100%;        
+}
+@media screen and (max-width: 960px){
+
+}
+@media screen and (max-width: 900px){
+    #page{
+        padding: 0px 0px 0px 0px;
+        margin: 10px 0px 10px 0px;
+        width: 100%;
+        text-align: center;
+    }
+    #page a{
+        display: none;
+        
+    }
+    #page .prv,#page .next,#page .now{
+        display:inline-block;
+        width: 50px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0px;
+        clear: none;
+        margin: 0px 10px 0px 0px
+    }
+    #page .now{
+       
+    }
+}
+@media screen and (max-width: 660px){
+    /*移动端列表*/
+    .lleft{
+        width: 100%;
+        text-align: left;
+        margin: -10px 0px 0px 0px;
+    }
+    .lleft .news{
+        padding: 10px 0px 15px 0px;
+    }
+    .lleft .news dl dd{
+        width: 100%;
+    }
+    .lleft .news dl dt{
+        padding: 0px 0px 0px 0px;
+        width: 100%;
+        text-align: left;
+    }
+    .lleft .news .txt{
+        word-break:break-all;
+        text-align:justify;
+        text-justify:distribute-all-lines;
+        padding: 0px;
+    }
+    .lleft .news:hover{
+        background: none;
+    }
+    /* 取消 hover 的特效*/
+    .lleft .news:hover dt, .lleft .news:hover dd a {
+        color: #000;
+    }
+    .lleft .news:hover dt{
+        color: #9a9a9a;
+    }
+    #mobile-search-input2{
+        margin:10px 0px 0px 0px;
+    }
+}

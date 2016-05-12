@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>浪潮报网</title>
+<meta name="keywords" content="联系方式">
+<meta name="description" content="联系方式">
+<link href="http://localhost/phpcms/statics/css/reset.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://localhost/phpcms/statics/js/jquery.min.js"></script>
+<style type="text/css">
+body {background: url(http://localhost/phpcms/statics/images/v9/about_bg.png) repeat-x;}
+#header{ height:94px;}
+#header .logo{ padding:0 100px 0 20px;float:left;}
+.log{line-height:24px; height:24px;float:right; font-size:12px}
+.log{color:#c7c5c5; margin-top:40px}
+.log a{color:#6f6f6f;text-decoration: none;}
+.log a:hover{text-decoration: underline;}
+#header .content{width:880px; margin:auto; height:60px;padding:10px 0 0 0}
+#content{width:920px; margin:auto; padding:14px 0 0 0}
+.left-nav{width:210px; height:399px; padding-top:10px}
+.left-nav h1,.left-nav .content li,.left-nav .content li.cur a,.left-nav .bottom{background: url(http://localhost/phpcms/statics/images/v9/about_left.png) no-repeat right top}
+.left-nav h1{display:block; height:40px; text-indent:-999px; overflow:hidden}
+.left-nav .content{background: url(http://localhost/phpcms/statics/images/v9/about_left_bg.png) repeat-y right top; padding-left:44px}
+.left-nav .content li{background-position: right -102px; display:block; height:30px; line-height:30px; font-size:14px}
+.left-nav .content li a{display:block; height:25px; line-height:25px; padding-left:14px; color:#6f6f6f}
+.left-nav .content li.cur a{background-position: left -72px;  font-weight:700; color:#0d4b9b}
+.left-nav .bottom{background-position: right -168px; height:216px}
+.col-auto{ padding:0 25px}
+.col-auto .title{font-size:25px;padding:5px 0 0;background: url(http://localhost/phpcms/statics/images/uline.gif) repeat-x left bottom; margin-bottom:15px}
+.col-auto .content p{ margin-bottom:15px; font-size:14px; line-height:25px; color:#6f6f6f}
+.footer{color:#666; line-height:24px;width:920px; margin:auto; text-align:center; padding:12px 0; margin-top:52px; border-top:1px solid #e5e5e5}
+.footer p.info a{color:#666;}
+</style>
+</head>
+<body>
+<div id="header">
+	<div class="content">
+	<div class="logo"><img src="http://localhost/phpcms/statics/images/v9/logo.jpg" height="60" /></div>
+    <span class="rt log"><a href="http://localhost/phpcms">首页</a> | <a href="http://localhost/phpcms/index.php?m=member&c=index&a=login">登录</a> | <a href="http://localhost/phpcms/index.php?m=member&c=index&a=register">注册</a></span>
+    </div>
+</div><div id="content">
+	<div class="col-left left-nav">
+    	<h1>关于我们</h1>
+    	<ul class="content">
+        	                <li><a href="http://localhost/phpcms/html/about/aboutus/">关于我们</a></li>
+			                <li class="cur"><a href="http://localhost/phpcms/html/about/contactus/">联系方式</a></li>
+			                <li><a href="http://localhost/phpcms/html/about/hr/">招聘信息</a></li>
+			                <li><a href="http://localhost/phpcms/html/about/link/">友情链接</a></li>
+			                <li><a href="http://localhost/phpcms/html/about/copy/">关于版权</a></li>
+			        </ul>
+        <div class="bottom"></div>
+    </div>
+  <div class="col-auto">
+    	<img src="http://localhost/phpcms/statics/images/v9/about_ad.png" width="659" height="171" />
+    	<h1 class="title"></h1>
+        <div class="content">
+        	            </div>
+    </div>
+ </div>
+<div class="footer">
+<p class="info">
+<a href="http://localhost/phpcms/html/about/aboutus/" target="_blank">关于我们</a> |  
+<a href="http://localhost/phpcms/html/about/contactus/" target="_blank">联系方式</a> |  
+<a href="http://localhost/phpcms/html/about/hr/" target="_blank">招聘信息</a> |  
+<a href="http://localhost/phpcms/html/about/link/" target="_blank">友情链接</a> |  
+<a href="http://localhost/phpcms/html/about/copy/" target="_blank">关于版权</a> |  
+<a href="http://localhost/phpcms/index.php?m=link" target="_blank">友情链接</a>
+<br />
+Powered by <strong><a href="#" target="">前浪新闻网</a></strong>  &copy; 2016 <img src="http://localhost/phpcms/statics/images/copyright.gif"/></p>
+</div>
+<script type="text/javascript">
+$(function(){
+	$(".picbig").each(function(i){
+		var cur = $(this).find('.img-wrap').eq(0);
+		var w = cur.width();
+		var h = cur.height();
+	   $(this).find('.img-wrap img').LoadImage(true, w, h,'http://localhost/phpcms/statics/images/msg_img/loading.gif');
+	});
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!--推荐 start-->
+<p class="rtit tuij"></p>
+<div class="tjlist" id="tjlist">
+{pc:content action="position" posid="18" order="listorder ASC,id DESC" num="5"}
+{loop $data $r}
+<div class="t">
+<p class="img"><a href="{$r[url]}" target="_blank"><img src="{thumb($r[thumb],299,189)}" width="209" height="148" />{$title}</a></p>
+<p class="txt"><a href="{$r[url]}" target="_blank">{$r[title]}</a></p>
+</div>
+{/loop}
+{/pc}
+</div>
+<!--推荐 end-->

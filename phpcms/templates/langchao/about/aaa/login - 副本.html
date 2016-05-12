@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>登录_新京报网</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-language" content="zh-CN" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-itunes-app" content="app-id=385679094"/>
+<meta name="author" content="www.bjnews.com.cn" />
+<meta name="copyright" content="www.bjnews.com.cn" />
+<meta name="description" content="新京报网用户登录" />
+<meta name="keywords" content="新京报网" />
+<link rel="Shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="Css/css.css" />
+<script type="text/javascript" src="Scripts/jquery.js"></script>
+
+</head>
+<body>
+<div id="header">
+    <div id="logo">
+        <div class="logo">
+            <h1><a href="http://www.bjnews.com.cn/" title="新京报网" class="bjnewslogo">新京报网</a></h1>
+        </div>
+        <div class="search" id="bjnewsbar" role="search">
+            <form method="get" name="scform" id="scform" action="http://www.bjnews.com.cn/search.php" target="_blank">
+                <div id="searchTxt" class="searchTxt">
+                    <div class="searchMenu">
+                        <div class="sld" id="sld">精确</div>
+                        <div class="searchTab" id="searchTab">
+                            <ul>
+                                <li class="selected">精确</li>
+                                <li>模糊</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <input type="hidden" value="1" id="sct" name="type"/>
+                    <input id="bjTxt" type="text" value="" name="sk" autocomplete="off">
+                </div>
+                <div class="searchBtn">
+                    <button id="searchBtn" type="button" value=""></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="nav">
+        <div class="nav">
+            <ul class="menu">
+                <li><a href="http://www.bjnews.com.cn/">首页</a></li>
+                <li><a href="http://epaper.bjnews.com.cn/" target="_blank">电子报</a></li>
+                <li><a href="http://www.bjnews.com.cn/opinion/" target="_blank">评论</a></li>
+                <li><a href="http://www.bjnews.com.cn/inside/" target="_blank">深度</a></li>
+                <li><a href="http://www.bjnews.com.cn/graphic/" target="_blank">图纸</a></li>
+                <li><a href="http://www.bjnews.com.cn/focus/" target="_blank">媒目</a></li>
+                <li><a href="http://www.bjnews.com.cn/note/" target="_blank">手记</a></li>
+                <li><a href="http://www.bjnews.com.cn/video/" target="_blank">视频</a></li>
+                <li><a href="http://health.bjnews.com.cn/" target="_blank">健康</a></li>
+                <li><a href="http://travel.bjnews.com.cn/" target="_blank">旅游</a></li>
+                <li><a href="http://house.bjnews.com.cn/" target="_blank">房产</a></li>
+                <li><a href="http://edu.bjnews.com.cn/" target="_blank">教育</a></li>
+                <li><a href="http://auto.bjnews.com.cn/" target="_blank">汽车</a></li>
+            </ul>
+        </div>
+    </div>
+    <dl id="kuaixu">
+        <dd> <span class="ksig"><a href="http://news.bjnews.com.cn/" target="_blank">快讯：</a></span>
+            <div class="klist">
+                <ul id="klist">
+                    <script type="text/javascript" src="Scripts/realtime_last_v3.js"></script>
+                </ul>
+            </div>
+        </dd>
+        <dt><span id="nolog"><a href="http://passport.bjnews.com.cn/reg" target="_blank" class="reg">注册</a> <span class="ln">|</span> <a href="passport.bjnews.com.cn/login" target="_blank" class="login">登录</a></span>
+            <span id="logsc"><a href="#" class="reg" id="logout">退出</a> <span class="ln">|</span> <span class="user" id="user"></span></span>
+            <a href="http://i.bjnews.com.cn/lxwm.html" target="_blank" class="Cooperation">合作</a> <a href="http://app.bjnews.com.cn/" target="_blank" class="client">客户端</a> </dt>
+    </dl>
+</div>
+
+<div id="cimg">
+    <style>
+body{background:url(Images/loginbg.png) repeat;}.login_u,.login_p,.lg .oth #qq,.lg .oth #wb{background:url(Images/u.png) no-repeat;}#header{position:relative}#cimg{width:1003px;padding-bottom:60px;margin:40px auto 0px;clear:both;overflow:hidden;position:relative;height:460px;}#cimg .img{clear:both;overflow:hidden;position:absolute;left:0px;top:16px;z-index:1;}#cimg #login{border:1px solid #E3E3E2;background:#fff;right:33px;padding-left:22px;padding-right:20px;padding-top:60px;width:305px;z-index:900;position:absolute;height:400px;}.tname{clear:both;margin:0px auto 0;overflow:hidden;}.tname dd{float:left;font:normal 20px '微软雅黑';color:#a80000;}.tname dt{float:right;padding-top:5px;color:#666;font:normal 12px '微软雅黑';}.tname dt a{color:#a80000;}.lg{clear:both;overflow:hidden;}.lg dd{clear:both;overflow:hidden;display:block;margin-top:25px;height:40px;}.login_u,.login_p{height:37px;padding-left:35px;width:265px;border:1px solid #cfcfcf;font:normal 14px/37px '';color:#a9a9a9;background-position:0 0;}.login_u{background-position:0 0;}.login_p{background-position:0 -64px;}.lg dt{clear:both;overflow:hidden;padding-top:12px;color:#e32929;font-size:12px;height:30px;}.lg .d{padding-top:0px;height:35px;color:#666;font:normal 12px '微软雅黑';}.lg .auto{float:left;color:#666;font:normal 12px '微软雅黑';}.lg .forg{float:right;}.lg .forg a{color:#666;font:normal 12px '微软雅黑';}.lg em{padding-top:2px;padding-right:5px;display:inline-block;float:left;}.lg .b{padding-top:0px;height:70px;}.lg .b .btn{border:none;width:112px;height:40px;text-align:center;font:normal 20px/40px '宋体';color:#fff;background:#A80000;cursor:pointer;}.lg .b .r{margin-left:25px;background:#D8D8D8;display:inline-block;}.lg .oth{height:22px;font:normal 12px/22px '微软雅黑';background:#ececec;color:#666;padding-left:10px;padding-top:0}.lg .oth span{font:normal 12px/22px '微软雅黑';color:#666;display:inline-block;float:left;}.lg .oth #qq{margin-left:18px;height:22px;width:18px;background-position:-32px -253px;cursor:pointer;}.lg .oth #wb{margin-left:20px;height:22px;width:18px;background-position:0px -253px;cursor:pointer;}#err span{display:none;}
+</style>
+    <div class="img"><img src="Picture/l.jpg" /></div>
+    <div id="login">
+        <dl class="tname">
+            <dd>登录新京报</dd>
+            <dt>还没有账号？ <a href="http://passport.bjnews.com.cn/reg" target="_blank">注册</a></dt>
+        </dl>
+        <dl class="lg">
+            <form name="flogin" id="form" action="/login/login" method="post">
+                <input type="hidden" name="ref_url" value="" />
+                <dd>
+                    <input type="text" value="" class="login_u" name="username" autocomplete="off" />
+                </dd>
+                <dd>
+                    <input type="password" value="" class="login_p" name="passwd" autocomplete="off" />
+                </dd>
+                <dt class="d" id="d"> <em>
+                    <input type="checkbox" id="autolg" name="keeplogin" />
+                    </em> <span class="auto"> 自动登录</span> <span class="forg"><a href="http://passport.bjnews.com.cn/reset/" target="_blank">忘记密码？</a></span> </dt>
+                <dt class="b">
+                    <input type="button" value="登 录" class="btn" id="flogin" />
+                    <a href="http://passport.bjnews.com.cn/reg/" class="btn r">注 册</a> </dt>
+                <!--<dt class="oth"> <span>不想注册？通过以下账户可快捷登录</span> <span id="wb"></span> <span id="qq"></span> </dt>-->
+            </form>
+        </dl>
+    </div></div>
+
+<div id="footer">
+    <div id="dbnews">
+        <div class="dbnews">经营许可证编号：京ICP证090533号&nbsp;&nbsp;
+            国新办网备字[2006]7号&nbsp;&nbsp;
+            广播电视节目制作经营许可证:(京)字第02592号&nbsp;&nbsp;京公网安备110402440031号<br>
+            Copy Right ©    2004-2013 www.bjnews.com.cn All Rights Reserved&nbsp;&nbsp;&nbsp;
+            新京报社版权所有 未经许可不得转载 版权法律顾问律师 刘家辉 电话：62112060 </div>
+    </div>
+</div>
+<script type="text/javascript" src="Scripts/n.js"></script> 
+<script type="text/javascript" src="Scripts/login.js"></script>
+</body>
+</html>

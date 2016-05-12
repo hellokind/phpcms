@@ -1,0 +1,121 @@
+<div id="footer">
+    <div class="partner">
+        <div class="tit">
+            <ul>
+        {pc:content action="category" catid="1" num="3" siteid="$siteid" order="listorder ASC"}
+                {php $n=1;}
+                  {loop $data $r}
+                    {if $r[catid]==$catid}{/if} <li class="l{$n}"><a href="" >· {$r[catname]}</a></li>
+                  {/loop}
+                 {php $n++;}
+        {/pc}
+                <li class="l4">· 服务</li>
+                <li class="l5">· 合作</li>
+                <li class="l6">· 联系我们</li>
+
+            </ul>
+        </div>
+        <div class="ptext">
+            <div class="lft p1">
+                <ul>
+                    <li><a target="_blank" href="https://itunes.apple.com/app/id693986775?mt=8">数字版</a></li>
+                    <li><a target="_blank" href="http://app.bjnews.com.cn/#bjnewsiPho">浪潮报新闻</a></li>
+                    <li><a target="_blank" href="http://app.bjnews.com.cn/#bjnewsiPad">浪潮报新闻HD</a></li>
+                    <li><a target="_blank" href="http://app.bjnews.com.cn/#thinker">thinker</a></li>
+                    <li><a target="_blank" href="http://app.bjnews.com.cn/#jl">驾临</a></li>
+                    <li><a target="_blank" href="http://caipiao.bjnews.com.cn/">浪潮彩</a></li>
+                </ul>
+            </div>
+            <div class="lft p2">
+                <ul>
+                    <li><a target="_blank" href="http://epaper.bjnews.com.cn">电子报</a></li>
+                    <li><a target="_blank" href="http://www.paizhe.com/">拍者网</a></li>
+                    <li><a target="_blank" href="http://famous.bjnews.com.cn/">杂志《名汇FAMOUS》</a></li>
+                    <li><a target="_blank" href="http://realestate.bjnews.com.cn">杂志《房地产世界》</a></li>
+                    <li><a target="_blank" href="http://weibo.com/xjb">浪潮报官方微博</a></li>
+                    <li><a target="_blank" href="http://www.bjnews.com.cn/wx/">浪潮报官方微信</a></li>
+                </ul>
+            </div>
+            <div class="lft p3">
+                 {pc:link action="type_list" siteid="$siteid" order="listorder DESC" num="10" return="dat"}
+                  {php $n=1;}  
+                    {loop $dat $v}
+                        {if $n % 5 == 0}{/if}<ul>
+                    <li><a href="{$v[url]}" rel="nofollow" target="_blank">{$v[name]}</a></li>
+                        {if $n%5==0}{/if}</ul>
+                    {/loop}
+                  {php $n++;}
+                    {/pc}
+            </div>
+            <div class="lft p4">
+                <ul>
+                    <li><a target="_blank" href="http://www.bjnews.com.cn/baoliao/">在线报料</a></li>
+                    <li><a target="_blank" href="http://www.bjnews.com.cn/tougao/">在线投稿</a></li>
+                    <li><a target="_blank" href="http://www.bjnews.com.cn/takepaper/">在线订报</a></li>
+                    <li><a target="_blank" href="http://i.bjnews.com.cn/sitemap.html">网站地图</a></li>
+                </ul>
+            </div>
+            
+            <div class="lft p5">
+                <ul>
+                    <li><a target="_blank" href="http://i.bjnews.com.cn/zxdt.html">最新动态</a></li>
+                    <li><a target="_blank" href="http://i.bjnews.com.cn/ggfw.html">广告服务</a></li>
+                    <li><a target="_blank" href="http://i.bjnews.com.cn/fxzd.html">发行站点</a></li>
+                    <li><a target="_blank" href="http://i.bjnews.com.cn/gybq.html">关于版权</a></li>
+                    <li><a target="_blank" href="http://i.bjnews.com.cn/gywm.html">关于我们</a></li>
+                    <li><a target="_blank" href="http://i.bjnews.com.cn/gzjh.html">工作机会</a></li>
+                </ul>
+            </div>
+            <div class="lft p6">
+                <ul>
+                    <li>24小时新闻热线</li>
+                    <li><strong>010-67106710</strong></li>
+                    <li>商务合作</li>
+                    <li><strong>010-67106394</strong></li>
+                    <li>版权合作电话</li>
+                    <li><strong>010-67106089</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="dbnews">
+        <div class="dbnews">经营许可证编号：京ICP证090533号&nbsp;
+            国新办网备字[2006]7号&nbsp;
+            广播电视节目制作经营许可证:(京)字第02592号&nbsp;京公网安备11010102001756号<script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?ba0e7859a57505c5640c98a3fa61b61d";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();</script><br>
+            Copy Right ©    2004-2018 www.bjnews.com.cn All Rights Reserved&nbsp;&nbsp;&nbsp;
+            浪潮报社版权所有 未经许可不得转载 版权法律顾问律师 刘家辉 电话：62112060
+            <script charset="utf-8" language="javascript" src="{JS_PATH}Scripts/tj.js"></script>
+            <script type="text/javascript">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fba0e7859a57505c5640c98a3fa61b61d' type='text/javascript'%3E%3C/script%3E"));</script>
+            <script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?ba0e7859a57505c5640c98a3fa61b61d";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();</script>
+        </div>
+        <div class="dbimg">
+          <a href="http://www.12377.cn/" target="_blank"><img src="{IMG_PATH}Picture/bt01.jpg" /></a><a><img src="{IMG_PATH}Picture/bt02.png" /></a><a><img src="{IMG_PATH}Picture/bt03.png" /></a>
+        </div>
+    </div>
+</div>
+<div id="rsig">
+    <div class="r"> <span class="gotop"></span> <span class="ask" id="ask"></span>
+        <div class="tanck" id="tanck">
+            <form action="" id="form_liuyan" method="post" target="_blank">
+                <p class="txt">联系方式</p>
+                <p class="lx">
+                    <input type="text" name="contact" class="inp" value="" />
+                </p>
+                <p class="txt">您的意见</p>
+                <p class="ap">
+                    <textarea class="opinion" id="opinion" name="content"></textarea>
+                </p>
+                <p class="tij">
+                    <input type="button" name="tijiao" id="btn_liuyan" value="提 交" class="btn"/>
+                    <span id="ier"></span>
+                    <span class="cls" id="tanckcls">关闭</span> </p>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{JS_PATH}Scripts/player.js"></script>
+<script type="text/javascript" src="{JS_PATH}Scripts/shar.js"></script>
+<script type="text/javascript" src="{JS_PATH}Scripts/jquery.qrcode.min.js"></script>
+<script type="text/javascript" src="{JS_PATH}Scripts/all.js"></script>
+</body>
+</html>

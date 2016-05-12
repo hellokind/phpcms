@@ -1,0 +1,42 @@
+{template "content","header_list"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}Css/list.css" id="flexlist">
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}Css/css.css" />
+<div id="main">
+    <div class="lleft">
+
+<!--新闻列表 start-->
+{pc:content action="lists" catid="6"  where="`catid` in (6,9,13,14,15,16,17,19,20,21)" num="20" order="inputtime DESC" page="$page"}
+{loop $data $r}
+{if $r[title]}
+<div class="news">
+    <dl>
+        <dd><a href="{$r[url]}" target="_blank">{$r[title]}</a></dd>
+        <dt>{date('Y-m-d H:i:s',$r[inputtime])}</dt>
+    </dl>
+    <p class="txt">{$r[description]}</p>
+</div>
+{/if}
+{/loop}
+{/pc}
+<!--新闻列表end-->
+        <div id="page">
+            <div id="pages">{$pages}</div>
+        </div>
+    </div>
+    <div class="nright">
+       	        <div class="rad">
+         <!-- AdService_Position_10 begin -->
+		<div id="adpos_10" style="width:240px;height:160px;">
+            <img src="{IMG_PATH}Picture/bqgg.png" width="240" height="160" alt="" border="0">      
+        </div>
+		<script type="text/javascript">adshow(10)</script>
+		<!-- AdService_Position_10 end -->
+        </div>
+        {template "content","left_top"}
+        {template "content","left_tuwen"}
+        </div>
+    </div>
+</div>
+
+
+{template "content","footer_list"}

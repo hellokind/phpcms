@@ -1,0 +1,37 @@
+﻿{template 'search', 'header_list'}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}Css/list.css" id="flexlist">
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}Css/css.css" />
+<div id="main">
+    <div class="lleft">
+<!--新闻列表 start-->
+{loop $data $i $r}
+<div class="news">
+    <dl>
+        <dd><a href="{$r[url]}" target="_blank">{$r[title]}</a></dd>
+        <dt>{date('Y-m-d H:i:s',$r[inputtime])}</dt>
+    </dl>
+    <p class="txt">{$r[description]}</p>
+</div>
+{/loop}
+{if empty($data)}未找到结果{/if}
+<!--新闻列表end-->
+        <div id="page">
+         <div id="pages">{$pages}</div>
+        </div>
+    </div>
+
+    <div class="nright">
+                <div class="rad">
+         <!-- AdService_Position_10 begin -->
+        <div id="adpos_10" style="width:240px;height:160px;">
+            <img src="{IMG_PATH}Picture/bqgg.png" width="240" height="160" alt="" border="0">      
+        </div>
+       
+        <!-- AdService_Position_10 end -->
+        </div>
+        {template "search","left_top"}
+        {template "search","left_tuwen"}
+    </div>
+</div>
+</div>
+{template 'search', 'footer_list'}
