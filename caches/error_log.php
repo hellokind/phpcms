@@ -487,3 +487,14 @@
 <?php exit;?>05-06 20:49:07 | 2 | copy(http://img.tbnimg.com/epaper/20160409/B01/02C530E202A9.jpg): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
  | phpcms\libs\classes\attachment.class.php | 172
 <?php exit;?>05-07 23:13:01 | 2 | Invalid argument supplied for foreach() | phpcms\modules\search\search_type.php | 94
+<?php exit;?>06-01 17:51:50 | 2 | mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) | phpcms\libs\classes\db_mysqli.class.php | 56
+<?php exit;?>06-01 17:51:50 | 2 | db_mysqli::error() [<a href='db-mysqli.error'>db-mysqli.error</a>]: Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 384
+<?php exit;?>06-01 17:51:50 | 2 | db_mysqli::errno() [<a href='db-mysqli.errno'>db-mysqli.errno</a>]: Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 388
+<?php exit;?>06-01 17:51:50 | 2 | db_mysqli::errno() [<a href='db-mysqli.errno'>db-mysqli.errno</a>]: Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 388
+<?php exit;?>06-01 17:51:50 | 2 | db_mysqli::error() [<a href='db-mysqli.error'>db-mysqli.error</a>]: Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 384
+<?php exit;?>06-01 17:51:50 | 2 | mysqli::close() [<a href='mysqli.close'>mysqli.close</a>]: Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 400
+<?php exit;?>06-01 17:51:50 | 2 | mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) | phpcms\libs\classes\db_mysqli.class.php | 56
+<?php exit;?>06-01 17:51:50 | 2 | db_mysqli::error() [<a href='db-mysqli.error'>db-mysqli.error</a>]: Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 384
+<?php exit;?>06-01 17:51:50 | 2 | db_mysqli::errno() [<a href='db-mysqli.errno'>db-mysqli.errno</a>]: Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 388
+<?php exit;?>06-01 17:51:50 | 2 | db_mysqli::errno() [<a href='db-mysqli.errno'>db-mysqli.errno</a>]: Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 388
+<?php exit;?>06-01 17:51:50 | 2 | db_mysqli::error() [<a href='db-mysqli.error'>db-mysqli.error</a>]: Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 384
